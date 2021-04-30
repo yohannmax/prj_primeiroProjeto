@@ -1,0 +1,586 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_1_programacaoInicial" sap:VirtualizedContainerService.HintSize="869,611" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="1_programacaoInicial" sap:VirtualizedContainerService.HintSize="242,476" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="var_strPrimeiraVariavel" />
+      <Variable x:TypeArguments="x:Int32" Name="var_intSegundaVariavel" />
+      <Variable x:TypeArguments="x:Boolean" Name="var_booTerceiraVariavel" />
+      <Variable x:TypeArguments="s:String[]" Name="var_arrQuintaVariavel" />
+      <Variable x:TypeArguments="sd:DataTable" Name="var_dtSextaVariavel" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="tiposVariaveis" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Double" Name="var_dblQuartaVariavel" />
+        <Variable x:TypeArguments="x:String" Name="var_strResultadoBotao" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign Primeira Variavel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[var_strPrimeiraVariavel]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["Yohann"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign Segunda Variavel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[var_intSegundaVariavel]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">27</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign Terceira Variavel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[var_booTerceiraVariavel]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign Quarta Variavel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Double">[var_dblQuartaVariavel]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Double">15.55</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign Array" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[var_arrQuintaVariavel]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[{"Uva","Maça","Pera","Banana","Morango"}]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:BuildDataTable DataTable="[var_dtSextaVariavel]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Coluna1&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Coluna2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Coluna1&gt;dado1&lt;/Coluna1&gt;&#xA;    &lt;Coluna2&gt;50&lt;/Coluna2&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Coluna1&gt;dado2&lt;/Coluna1&gt;&#xA;    &lt;Coluna2&gt;10&lt;/Coluna2&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Coluna1&gt;dado3&lt;/Coluna1&gt;&#xA;    &lt;Coluna2&gt;12&lt;/Coluna2&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[var_strResultadoBotao]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Conteúdo da 1ªVar: &quot; + var_strPrimeiraVariavel + Environment.NewLine + &#xA;&quot;Conteúdo da 2ªVar: &quot; + var_intSegundaVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 3ªVar: &quot; + var_booTerceiraVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 4ªVar: &quot; + var_dblQuartaVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 5ªVar: &quot; + var_arrQuintaVariavel(1) + Environment.NewLine + &#xA;&quot;Conteúdo da 6ªVar: &quot; + var_dtSextaVariavel(1)(1).ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 6ªVar: &quot; + var_dtSextaVariavel.Rows(1).Item(&quot;Coluna2&quot;).ToString + Environment.NewLine]" />
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Conteúdo da 1ªVar: &quot; + var_strPrimeiraVariavel + Environment.NewLine + &#xA;&quot;Conteúdo da 2ªVar: &quot; + var_intSegundaVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 3ªVar: &quot; + var_booTerceiraVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 4ªVar: &quot; + var_dblQuartaVariavel.ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 5ªVar: &quot; + var_arrQuintaVariavel(1) + Environment.NewLine + &#xA;&quot;Conteúdo da 6ªVar: &quot; + var_dtSextaVariavel(1)(1).ToString + Environment.NewLine + &#xA;&quot;Conteúdo da 6ªVar: &quot; + var_dtSextaVariavel.Rows(1).Item(&quot;Coluna2&quot;).ToString + Environment.NewLine]" />
+    </Sequence>
+    <Sequence DisplayName="IF" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If sap2010:Annotation.AnnotationText="var_intSegundaVariavel &gt;18 - Se var MAIOR que 18&#xA;var_intSegundaVariavel &lt; 18 - Se var MENOR que 18&#xA;var_intSegundaVariavel = 18 - Se var IGUAL a 18&#xA;var_intSegundaVariavel &lt;&gt; 18 - Se var DIFERENTE de 18&#xA;var_intSegundaVariavel &lt;= 18 - Se var MENOR OU IGUAL a 18&#xA;var_intSegundaVariavel &gt;= 18 - Se var MAIOR OU IGUAL a 18" Condition="[var_intSegundaVariavel &gt; 18]" sap:VirtualizedContainerService.HintSize="713,351" sap2010:WorkflowViewState.IdRef="If_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Verdadeiro - Idade: &quot; + var_intSegundaVariavel.ToString]" />
+        </If.Then>
+        <If.Else>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Falso - Idade: &quot; + var_intSegundaVariavel.ToString]" />
+        </If.Else>
+      </If>
+      <If sap2010:Annotation.AnnotationText="AND - E ( var_intSegundaVariavel &gt;= 18 And var_strPrimeiraVariavel = &quot;Yohann&quot;)&#xA;OR - OU ( var_intSegundaVariavel &gt;= 50 Or var_strPrimeiraVariavel = &quot;yohann&quot; )&#xA;NOT - NEGAÇÃO ( Not var_intSegundaVariavel &gt;= 50 )" Condition="[Not var_intSegundaVariavel &gt;= 50]" sap:VirtualizedContainerService.HintSize="713,306" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Verdadeiro - Idade: &quot; + var_intSegundaVariavel.ToString + Environment.NewLine + &#xA;&quot;Texto: &quot; + var_strPrimeiraVariavel]" />
+        </If.Then>
+        <If.Else>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[&quot;Falso - Idade: &quot; + var_intSegundaVariavel.ToString + Environment.NewLine + &#xA;&quot;Texto: &quot; + var_strPrimeiraVariavel]" />
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="For Each e Switch" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="var_intIdxForEach" />
+        <Variable x:TypeArguments="x:Int32" Name="var_intIdxForEachDT" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[var_arrQuintaVariavel.Length.ToString]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[var_dtSextaVariavel.Rows.Count.ToString]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[var_intIdxForEach]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[var_arrQuintaVariavel]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="fruta" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="539,582" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="var_strFruta" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[var_strFruta]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[fruta]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="497,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[var_intIdxForEach]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[var_intIdxForEach + 1]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Fruta atual: &quot; + var_strFruta + &quot; - Index: &quot; + var_intIdxForEach.ToString]" />
+              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[var_strFruta]" sap:VirtualizedContainerService.HintSize="497,159" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                <Switch.Default>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Esta é uma fruta desconhecida!" />
+                </Switch.Default>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine x:Key="Maça" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Esta é uma maça!" />
+                <WriteLine x:Key="Morango" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Esta é uma morango!" />
+              </Switch>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEach>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[var_intIdxForEachDT]" DataTable="[var_dtSextaVariavel]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,483" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="var_strConteudoColuna1" />
+                <Variable x:TypeArguments="x:Int32" Name="var_intConteudoColuna2" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[var_strConteudoColuna1]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[CurrentRow.Item("Coluna1").ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[var_intConteudoColuna2]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(CurrentRow(1))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[var_intIdxForEachDT]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[var_intIdxForEachDT + 1]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Colula1: &quot; + var_strConteudoColuna1 + Environment.NewLine + &#xA;&quot;Colula2: &quot; + var_intConteudoColuna2.ToString + Environment.NewLine + &#xA;&quot; - Index: &quot; + var_intIdxForEachDT.ToString]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+    </Sequence>
+    <Sequence DisplayName="Do While e While" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="var_intSegundosWhile" />
+        <Variable x:TypeArguments="s:DateTime" Name="var_dateDataAtual" />
+        <Variable x:TypeArguments="x:String" Name="var_strDataAtual" />
+        <Variable x:TypeArguments="x:String" Name="var_strHorarioAtual" />
+        <Variable x:TypeArguments="x:Int32" Name="var_intMinutoAtual" />
+        <Variable x:TypeArguments="x:Int32" Name="var_intHoraAtual" />
+        <Variable x:TypeArguments="s:DateTime" Name="var_dateOutraData" />
+        <Variable x:TypeArguments="x:TimeSpan" Name="var_dateDife" />
+        <Variable x:TypeArguments="x:Int32" Name="var_intDifeSeg" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Do While" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_26">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Horário de Brasília - Hora Certa Oficial do Brasil" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" Version="V1" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,809" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="var_strHorarioAtual" />
+                  <Variable x:TypeArguments="x:Int32" Name="var_intSegundos" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="436,624" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                  <ui:InterruptibleDoWhile.Body>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,459" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGetText DisplayName="Get Text Horário de Brasilia" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.horariodebrasilia.org/" DesignTimeRectangle="464, 318, 1010, 278" ElementType="Text" FriendlyName="'11:56:59'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' /&gt;" ImageBase64="" InformativeScreenshot="856217a778627d591f2bafcad3edbd29.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Horário de Brasília - Hora Certa Oficial do Brasil' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="x:String">[var_strHorarioAtual]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <Assign DisplayName="Assign Segundos" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[var_intSegundos]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(var_strHorarioAtual.Split(":"c)(2))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[var_intSegundos.ToString]" />
+                    </Sequence>
+                  </ui:InterruptibleDoWhile.Body>
+                  <ui:InterruptibleDoWhile.Condition>
+                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_intSegundos &lt;= 30" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                  </ui:InterruptibleDoWhile.Condition>
+                </ui:InterruptibleDoWhile>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Contato'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.horariodebrasilia.org/" DesignTimeRectangle="1166, 742, 61, 20" ElementType="Text" FriendlyName="'Contato'" FullSelectorArgument="&lt;webctrl id='contato' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='contato' tag='A' type='' aaname='Contato' check:fulltext='Contato' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAYCAYAAACldpB6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOZSURBVFhH7Za/a9tAFMf9Z2gNZAlkaDZnjKFDCh1q8NLNmAwhdCghU5ZiRBBBBFNEKMEYbJAhBRtScIaAMiTggAMKJOCCC87gwYMHDR48ePj2PekkS7LjH2nSDtUXNNy7p7t7n7v37mKIhAgCKYJAiiCQIgikCAJpIgTrwYC6rWJ9+QtiMfqWZSS3KzC6Q+HxSuo2oGYNdEVzfllolr9BuxXNBRWCYKF+oECiwJdSeeSrDRiXDVQKeSRtIArkm77wfXnVszRHqrY4hE4NSVqzfCPaCyoAoV3K2Tv/sdQWFp/6LWgpWqSkodYTthfWv4cwqGNfokWkDToPT+juFIm4CvXadxqsJipZzUudpbgGudrCQHTTGYfO8LINWNc6MnHHT1pVsVt2/YQP2d0vWRYoeg1o/tSUZCTSOuruRtwUA//FYkXURRentZyWsST61tNFVH6On2QPwuAibzvuXoyWP1N9EzIHJanYL19R6hjQtpx0Ws+awQDjCgWSg8x+5zXIIuj9S/YaoHtLwW6R7S0tlFLQ7JC9X8cubYy0oUGzU/MK+iEB56DipzB5+F4LxvciEmTLHLNPy97EAcFhP+l9Efo52asVZDZ4zvGU9iC0Syo5qNAfhWEOmYcy/ZML/TNE89gZK/+L2+4uh/0IIJ88guUqnA7Wj7wNTu8Ig1C7wOP77GPpcA/1jTNWILGHlNKbZN88C9g9CPYC/APPVNOZaK/uO/pCPQMZWlTihKcSED6EFuTafUHPXRPsFFAEZFIYAqXtGrUnnWqrqgX/JXkQumUuioucBNpJL9CwnD5nl8eDdbQAhL6F9h0f6TOoe6P64wUdhhCG5JeoIf4iOiqM1Mm5PLUmcPFcVZA5adLu/wUI/XvnRuKx6FvZUOi9UkSeCvHrQJjjduDiyaAyVS7Ns9MhWeLcej4Et+Zod8EVuUX8SQgz0yF44kcQSO0TLjhPvBN6BIlvgrgOU4w9vTAq0B64/VwIon+sllio7ZF9GoRZhTFeoS0cKQCBRkPtk2JPMHoxOtdSgk+JFAp4kStyDgjmEUNV6Z3hXJHmkbOWxOcz1Oja5Gtuh4KQqCbwHF7QloEdaq9ts98fXJEjDdG9pMlSClY4cB6I6wC96ZuT8mTCY0k97/hSZH4IeDSwyzvFcx7ck6GHOr8LvLHpgVUw0e06Qb8ruPvch/k1J9abQ0UMOP5Y0lF7nPJY+p8VQSBFEEgRBFIEAcBvIqAOAH5MUFQAAAAASUVORK5CYII=" InformativeScreenshot="391b23560d71d76ee47f76fa54d6f440.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Horário de Brasília - Hora Certa Oficial do Brasil' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1083, 742, 67, 20" ElementType="Text" FriendlyName="'US Time'" FullSelectorArgument="&lt;webctrl aaname='US Time' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='US Time' tag='A' type='' check:text='US Time' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAYCAYAAACoaOA9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANISURBVFhH7ZexayJBFMb9M7YVbASLXBdLhRQJXHGCRYQUIleFq8QiHEKQLUS2kLCFBAl4sEIODHiwNsem8MCAgVxxECEHpkhhYZFiC4sU3723O8ntru5Gz0PuYH8w4L6Z9+bttzPzxghCfAnFCSAUJ4BQnABCcQIIxQnAIc4N5MgxIpUb8TzPoEL9kRYG4tnGxLjXwWFWRpT9qUmJKgoVA7ePYshCxHyvtjq0bsv6LV8J1w2xpjgm2apW4tFtFcWaBoVaMS+Eiqno3Iuhc4yhi/F2ayG3RT5bdXx02bsYfP0fxfnZxR75JMlnJkwv3HeRoT7paDDft5AJtCzFz+r0699gPXGugr7oDEaJxifOKfIyBIjjmWfSrtt5TIdQ9mVInHdMQbF9R7M+YXzRxF6Ccz1GfF+jcbbfCxPye17d1JL5FjojU3T+Zj1xpgYKHPyoj8mTsP0xq4pTRXL7GJmKDv3SgJrn7S3j8EMd0VQDzd4QeruFPYli7nZpE9vMrjWkyRbNtqDRGKOnQ+Z5KZ585RZo7QN5/KWBJPuxSPkm1HYfg9F0ya3kZFVxSJhPD7aBmQ1Q5Dy2KD/HO45PWbQ6OlbQMZq7tNVLfbhrhWmvcoeIzNriWEzvoJ81UUiJJc5NkpGrDVdYUauKo0BzHfYi//JQPAu+sS9VPNbxXrfOwUytD+OSVo2jdcq2iNY4wd8Rx8mTicloCK1Cy5viSQe662v4s6o47hfxzd/yFWNFnKAmX9tuzGrilDnAK+I4mHxW5yb0Z3PiPMd5DYc4tB93KPg7vy/t7Z+ik6fnHfc+dfH9HPGlk9mAOHT1SNOY9Olya9khDoWvyRRIRrHnrX3AY6+JNxQ4eXInLCTXmWIlnTu99RxwzBR6iePRRXA+3AI2IA5/YDqQvYe2dZkt03mZaMFw2F3iwKQJqDxyIvG3DXFTpYNW2KQU3RlcQR+gHdh9kZiMQkncaksqkjHbnmu73iCATYhDRY2ereoaq0O5sEu58r5qFRJvrm5xGPMB+kkDGSEIt+i2gsMTv8rziNsLjf5bVRHnOwX7UKVK88XqR+CfKw+bEYeZjQzIjktgPKVCuZybdYE4IS+E4gQQihNAKE4AoTi+AL8AlY89E77J/mIAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="1357, -9, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMPSURBVDhPfZNJSFtRFIafipG0GYrgFBNLVbRtLBQL2QpqW0pBLe7cGcc8xSFOoFYXYhZuBVcuXWiUutHiQipCFg4gWlOHqkWNLw+HZk6MtPHvuZfa0k0f/MnlvDN897/3Cezp6up6Y7VaHe3t7WftVqtEa6mtrU1qaWnhYmsWo/dctF7t7u5+NzNljxMoYKSkL03NzWCyiCLq6+vR2tqKvt5e9PX18TWLWSwWntPU3ASqOaRGLwRRbGLPDxIaGhrQ2dmJyalJ7O3tYXt9HVsrqzg4PMTs7Cx6enp4I5ZLilksYrdQV1fXL4pijL0YHBzE3v4+nE4nXGcSTnd3cbi5CX8giJOTExwdfcPQ0NAfmtra2mGBfvobGhtjhASHwwG3W0YgEEAoEkHk/BxhWcZ19AahcBjBYBAbGxsgdE5rNtfYhBpzTT9RxMbHx7FP09fW1njidTSKkORG4PSUF0eooSRJnGRiYoJNR3V1tU0oLCx8X1RUFFtcXMTV1RU8Hi/Wae/TMzNwzM3hgDzwExGj8np9PIeRFhcXw2g0DgtpqakDKSkpt5+Wlnihz+fH5eUlhoaHYa2sxMfRUVx+93Aqpp2dHd5Ap9NBdV9lE9LT0gc0Gs3twsIC/H4/JLcbdrudm/XBPo3dbSeCoRDfRigUhtfnw/LyMpKTk6FWq21CRkbGQHx8/O3IyAiOj48xPz/PT8FHzaI3N9yLSOSa/7P9u1wujI2NISEhAVqt1iboqAFdxluTyYTNrS3I5DojYVOjVMQUpuks5vF6udHkGagGD7QP/hLExcXR2YpkoofuwBn3ghl2fnHBC78eHHCqjo5OPp3l/ybQdVHgJ+uYmJiIqqoqrKys8KnMD4YdIhoWM5vNSEpK4tPZUDJ/UMjNznl1T6k8Y8E7ERXKKyr4taYPDZV0GnqDgU+9y1EqlXLOo+y3QsHjJ+osvaFVq9F8VigUMlHIRCRT8j9iMfZOkaiQ1SqV06DXW58XPFMLL0tKhad5+ar83FzTQ72+zKDLLP+fsjL1ZXk5uSZW87qkVPgF0i9Xj3SM56IAAAAASUVORK5CYII=" InformativeScreenshot="54c5822c8780eb4407f24caae9bbbe1e.png" Selector="&lt;html app='chrome.exe' title='Horário de Brasília - Hora Certa Oficial do Brasil'/&gt;" Url="https://www.horariodebrasilia.org/" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </Sequence>
+      <Sequence DisplayName="While" sap:VirtualizedContainerService.HintSize="242,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Assign Data Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign.To>
+            <OutArgument x:TypeArguments="s:DateTime">[var_dateDataAtual]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="s:DateTime">[Datetime.Now]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Data Atual2" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[var_strDataAtual]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[var_dateDataAtual.ToString("dd_MM_yyyy")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Horario Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[var_strHorarioAtual]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[var_dateDataAtual.ToString("hh_mm_ss")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Segundo Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[var_intSegundosWhile]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[var_dateDataAtual.Second]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Minuto Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[var_intMinutoAtual]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[var_dateDataAtual.Minute]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Hora Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[var_intHoraAtual]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[var_dateDataAtual.Hour]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,64" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[&quot;Date1: &quot; + var_dateDataAtual.ToString + Environment.NewLine + &#xA;&quot;Date2: &quot; + var_strDataAtual + Environment.NewLine + &#xA;&quot;Date3: &quot; + var_strHorarioAtual + Environment.NewLine + &#xA;&quot;Segundos: &quot; + var_intSegundosWhile.ToString + Environment.NewLine + &#xA;&quot;Minutos: &quot; + var_intMinutoAtual.ToString + Environment.NewLine + &#xA;&quot;Horas: &quot; + var_intHoraAtual.ToString]" />
+        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile.Body>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,716" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;Segundo while: &quot; + var_intSegundosWhile.ToString]" />
+              <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                <TextExpression.Namespaces>
+                  <sco:Collection x:TypeArguments="x:String">
+                    <x:String>System.Activities</x:String>
+                    <x:String>System.Activities.Statements</x:String>
+                    <x:String>System.Activities.Expressions</x:String>
+                    <x:String>System.Activities.Validation</x:String>
+                    <x:String>System.Activities.XamlIntegration</x:String>
+                    <x:String>Microsoft.VisualBasic.Activities</x:String>
+                    <x:String>System</x:String>
+                    <x:String>System.Collections.Generic</x:String>
+                    <x:String>System.Data</x:String>
+                    <x:String>System.Diagnostics</x:String>
+                    <x:String>System.IO</x:String>
+                    <x:String>System.Linq</x:String>
+                    <x:String>System.Management.Automation</x:String>
+                    <x:String>System.Net.Mail</x:String>
+                    <x:String>System.Xml</x:String>
+                    <x:String>System.Xml.Linq</x:String>
+                    <x:String>UiPath.Library</x:String>
+                    <x:String>System.Windows.Markup</x:String>
+                  </sco:Collection>
+                </TextExpression.Namespaces>
+                <TextExpression.References>
+                  <sco:Collection x:TypeArguments="AssemblyReference">
+                    <AssemblyReference>System.Activities</AssemblyReference>
+                    <AssemblyReference>mscorlib</AssemblyReference>
+                    <AssemblyReference>System.Data</AssemblyReference>
+                    <AssemblyReference>System</AssemblyReference>
+                    <AssemblyReference>System.Core</AssemblyReference>
+                    <AssemblyReference>System.Management.Automation</AssemblyReference>
+                    <AssemblyReference>System.Xml</AssemblyReference>
+                    <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                    <AssemblyReference>UiPath.Library</AssemblyReference>
+                    <AssemblyReference>PresentationFramework</AssemblyReference>
+                    <AssemblyReference>WindowsBase</AssemblyReference>
+                    <AssemblyReference>PresentationCore</AssemblyReference>
+                    <AssemblyReference>System.Xaml</AssemblyReference>
+                  </sco:Collection>
+                </TextExpression.References>
+                <sap2010:WorkflowViewState.ViewStateManager>
+                  <sap2010:ViewStateManager>
+                    <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                  </sap2010:ViewStateManager>
+                </sap2010:WorkflowViewState.ViewStateManager>
+              </Delay>
+              <Assign DisplayName="Assign Segundo Atual" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[var_intSegundosWhile]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[Datetime.Now.Second]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[var_dateOutraData]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:TimeSpan">[var_dateDife]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:TimeSpan">[var_dateOutraData - var_dateDataAtual]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[var_intDifeSeg]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[var_dateDife.Seconds]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;Dife: &quot; + var_dateDife.ToString + &quot; SegundosDife: &quot; + var_intDifeSeg.ToString]" />
+            </Sequence>
+          </ui:InterruptibleWhile.Body>
+          <ui:InterruptibleWhile.Condition>
+            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="var_intSegundosWhile &gt;= 5 And var_intDifeSeg &lt;= 15" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+          </ui:InterruptibleWhile.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InterruptibleWhile>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

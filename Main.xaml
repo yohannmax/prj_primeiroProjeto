@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="895,611" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="895,2402" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="37">
+    <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -38,10 +38,13 @@
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -75,7 +78,6 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -84,12 +86,209 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_28">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="518,2337" sap2010:WorkflowViewState.IdRef="Sequence_28">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Alterações no código!&quot;]" />
+    <Sequence DisplayName="5_extraindoTabelaSite" sap:VirtualizedContainerService.HintSize="476,2245" sap2010:WorkflowViewState.IdRef="Sequence_30">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="var_dtAcoes" />
+        <Variable x:TypeArguments="x:String" Name="var_strNomeArquivo" />
+        <Variable x:TypeArguments="sd:DataTable" Name="var_dtAcoesCsv" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign Nome Arquivo" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[var_strNomeArquivo]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Users\" + Environment.UserName + "\Documents\UiPath\prj_primeiroProjeto\output\acoes"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,1153" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,937" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Baixar arquivo'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.infomoney.com.br/cotacoes/petrobras-petr4/historico/" DesignTimeRectangle="1090, 518, 115, 20" ElementType="Text" FriendlyName="'Baixar arquivo'" FullSelectorArgument="&lt;webctrl parentid='quotes_history_wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quotes_history_wrapper' tag='SPAN' type='' aaname='Baixar arquivo' check:text='Baixar arquivo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAYCAYAAADAm2IFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASvSURBVGhD7ZhZ6FVVFMajgcgeDAxDbSDSIOopEhRBwih9iyIQwaQgIiIIIuihB0lQhBSyNK0cMzLHRLOonDJLc0glKtScKoccUnM27XP9WGdxz/90rv97PEpxOB8c7r3rrL323uvba9j3KtWoLGpyK4ya3AqjJrfCqMmtMGpyK4ya3AqjDbmvfWeCMf9+rn5T6jFNmv6zdO6fRLlFrNordX5XuvcDaddfibCGzpyTnv5Suu4taeS6RHiZkUtuh3HSbZMbz81GTpA8zHSK8Ltoh3T9WOkOs7PtSCKsoRN/S/3nu09f/TYRXmbkkjvws0SQADKn/OSn7M4p0p7jLm8VR89IJ20zNdqCLHjoVLFgKYKWyAUb9kud3pFutwj8/ZjLNh2QHvlYummCjyNCH7bfPx7y92C1peWO46U+s5zkDze73v0zpAMnXYfNDV3tNoZ8IZ22lLX4V6nXTM8iyPl88nNpd+pgzdnq7x77RBq+xteXt3bsl7V3xNb+4lcuQ4dPdNDlN2NB2MiuA5/hu7T/0Imxr6z073xmMdUCiwh/+WvfC37Hz/iRMd0mSa+v92yQRuHI7TfXjUAUhKFP2iZ9h+Putvoc9TVL7tnzXmvQe26p217ym3Tj2w3CdxyV7prqG7rlPelWW3xs5EGbHzsgHMkTus8v83dplLV3+LTUd47LGcd49ozOteYT5GXJjeDBd+nMiK/xOT7ElzMsOMLPrCG9l4fm+VoDhWoujRENUgBS1v+R/DBguHdC+JiNLsuSCyAQIlnU6O+le6b7xr7Z4+/BzC3SzlQD9ovVa0oCB+zTnS4LR2LnfWv2OCjNUMbeKIsK5A/YmiPSSakj1vp43pUll0P/uGUBDgyRGlix2w8+BG+3Q4qvmHPcpsb62Mt91rAy9o0NidCQS26z5xobTGqi02uGsPHsEv+dRy6AyEhxLIoU1x7CGXFwwpFZ262iFXv0CqRA1jg7ITCADrqMKUsuWLC9bXaEvGcWNwjnEPI+b7+sDT3WGv1Ny2l5rUUoJz0mAssscnt+5KQzLv2EjWbkYvMpq6/ock3ad8LlgHfUZq5fzJe1zTpBM0dmUcZeEBhpMYssQWXIJfORHYhUInbrYU+7kaovtt88P7fcUIF4P9gakZgYZ1GbIoVHcxU2mpG70iIXObrYSF+xIhVxaLpObNiOWlOU3DL2LjVyn1jU2A/YYv7qYnNfjFwQJeClFY3v0WRdkcgF6aaCiedvc2M0JMfPug516IXlbW3kkct9t7udRuTTLAvwnToXzqOWYYPIDgeRpgbYvRB5UXLL2itSc5daNrvBDg2H6IeDLqOM0emi1x65ETT0N3xSumi2wF7LbqVrbrahSp9yJluzr7EIZNEtE7Wx2WbkstFB9i4drdEtQzLER6ShE1mB+cN2UXLL2ivSLbNHDnxaN7IZT3vk4g/qbOjTZNFsBUp3y3kPC+ROyx0rAMlRc3keXejNCfp55HJXhFCcwr8zRA9gQyHHiX/aAskMUSNZPNemOP1FycV+WXut3nPBwVOeJYIE7qFjLdK4SbRHLojDyOGjycriku65NYqjGUH/B9TklkRNboVRk1vjP0FNbmUhXQA7Won/sUXhCAAAAABJRU5ErkJggg==" InformativeScreenshot="2b2326f2ac4f96df087b93015bbb8eee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='tSnmtk1f' title='Petrobras PETR4 - Histórico | InfoMoney' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="1061, 518, 144, 20" ElementType="Button" FriendlyName="'Baixar arquivo'" FullSelectorArgument="&lt;webctrl parentid='quotes_history_wrapper' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quotes_history_wrapper' tag='BUTTON' type='button' aaname='Baixar arquivo' check:text='Baixar arquivo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAYCAYAAAAcTtR3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUwSURBVGhD7ZhryGZTFMcnl4QPFJF7cinxSRQpiVy+iZQUoiRJKSkffBBFCmWYcWdmjIxhMGHImAtjMBdjTEJmzA1zYWbMDHM3/K1f66ye/R7nvO9z5hzNK/tfp+d59llnPXuv/dtrr7NHKCurQ2WgsjpVBiqrU2WgsjpVBiqrU2WgsjpVI6DunSsd8qQ0Z03RkJVV0l4HCp8jRv7z2ucx6ZRx0vhvpd1/FcZ96jPr3xHPSKe/JK38rWjM0s7d0o0fSPs/Lj34edHYsYYNUAeNlo57oXcdbkAEWPeZTROmpiyXDhglnWB+lm4qGrO09Q/p0ske07s/LRo71rAB6ur3ioZCADTmG19NJ46RVm/x9n61eae0zQKYNVBk+w3bmy3QJhq2QKGFv0iHPS0db5nmp9+9bdE66ZI3pUOf8ufIRBfb7683+H1E/+jnea86WC9/53ZnTpDWbXMbAnrPHPdx/VRph20H036Qzpno2ZJ2Pq97X1qVwDxpid+74h3p/nnev6q+47+tv03W99s/8jZs+MQGW37zLAof5X4QM2KXxg+bePau2f6dz7LG2mImk935sY+FuBNn4sgzxzwvPbTAs16q/0SGuvB17zhwAAn2bIlsjTFZp1q9FfVSGahdf3rtgN0tM9z39B+lg5/oQbZ8s3TSWA/ikc9Kx1rAIngX2P/jB8XkcYXtrTP9Xqq2/jbukM6f5O08x/OMGZv9LCa0twUqFiyxS3cAYk3MY64n2IKMONOHdCwXveF9DVUCFRPHZKeqAqrOtl8FUHS4qoaiuKbIDgHCgp+LHyYGc24B2cgvva0MFAIa4CEQj3whnTbeg/nJar+PJi6WViRF/PdWf7HdAvW7K7wtJg8/L9oLA3DWqY2/h231036W9TkyGtvVA/P9ee61BYqFdqVlOyAlI4VmrfLFBlTLbGEQK/5z9KJe/xjLGfbSw7OPLiwaTZVARQe5UlDKQAVM2KWdbqIAqu7a1zpM2ucNpU7h4+bp/rsKKAQ8sX0QCLaPoRQTELBGbMq++1U//qj92F7o42t2P1Uac55F4aMpUOitZQN3AYC5aVoPMsDnftV46Rt29DXq1dotL+14QJUCVXV/TxQwlIPBwOZbJmJFx+DQTMtQZ7/ioPFceoWPOqDweYPVS9hypLB2q7cj7lFrcVTB/5V9xxjrJq+sNv4ituniTVWGog1QZHiyIBmJzLRko29psQ0ONt6qOA9aQ5Wh4cLB1JXdwIR4vq7DKO5fa8VsDJYJotaI7TEK9PBRB9Rsy1C0Y4uP9Dgi0jygHv1cz3fUDjHOwQKcqo2/Pc1QV03pjQcttngdZf89GFAottc7ZvW+R6HeWYYKpQMoX21hQoMBlRamDHbyUh8ARe2WXW5DXXHbhwN9VAHFedTJtupoH2fZju/ULTFh1Cb4IIPFpLAFXDZ54Fj7BaqtvyY11AzL2gcaqID71Xpvo0TgDQ27oYCKhUq9yidlAQU7WmNZvHUNVVYVVF3AhAKoclGermYGOG9tb+C0xVse2SkCXAcUwb3G7qVZKd7yAAvYIqNgE9mP/w/fTYFq66/JWx5jZJGltpG1uYYCinhQN4U9hToFe6j1W16VUqi6ggkFUFUXQeHMiTOQEGBFDcV1+dte4GJfBRRnOUDERHBKTJZABDHambhfLShkwKh5CBhHDLHKmwKF/7b++j2HQuu3ezaMieecaJRlFN6AhwIKxQIAeAr1sv6Vcyigon7K2ruqg2I4qBFQWcNDGaisTpWByvrfKAOV1aGkvwHsLBxF81kFuAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.1" DisplayName="Type Into 'Nome'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" Text="[var_strNomeArquivo]">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="169, 530, 992, 22" ElementType="InputBox" FriendlyName="'Petrobras PETR4'" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" ImageBase64="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" InformativeScreenshot="9bec9b7f00362c9e4dc2a4e3a854ba59.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="22, 527, 144, 28" ElementType="Text" FriendlyName="'Nome'" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;ctrl name='Painel do Explorer' role='pane' /&gt;&lt;ctrl name='Painel de Layout de Pastas' role='pane' /&gt;&lt;ctrl name='Painel de Detalhes' role='pane' /&gt;&lt;ctrl name='Nome:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;ctrl name='Painel do Explorer' role='pane' /&gt;&lt;ctrl name='Painel de Layout de Pastas' role='pane' /&gt;&lt;ctrl name='Painel de Detalhes' role='pane' /&gt;&lt;ctrl name='Nome:' role='text' automationid='' check:text='Nome:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAgCAYAAAD0Z1G3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGTSURBVHhe7ZfRbcQgDEA7VqZhFmZhlGySSSjGSc4Q2iaVdeKkZ+mJO4idDz8B+VqWJQN4gVDgCkKBC0cgFLggISNCgQsIBa4gFLiCUOAKQoErCAWuIBS4glATEVdpx5ZTuK6FtOW8xsv8bCDURKhQJbaUQ7eGUPAYEWpLKYtXWwrNGkLBY1SoIlLdqtYczdpIqDpno1vXejHbx9ZY1kIqB+sR7XuEtq45gmve+Eg+kJARoSbgFGr/bQXphdKmWxmCimOeqTWMAKco55F6zanP2CPXyo1Qn4UVqm9eK1QsLR40tua8JOul1DyZOv4X9KW7QKO6Kl2T8wsINRGNUAW7WzRC2V2joRWirzcUxgpV644DoT6QsQA69z6hRnXvIyEjQk3AVYDC3uRkhfrpLjM48h4JdeOO9BcINRFDofb5GuY+pHN2N9G7js1/LFRhWHe9L5yEjAg1AVcBdmojpc/2gm2+2vboc/8jlKBSveKsgVDwbhAKXEEocAWhwBWEAlcQClxBKHAFocCVIxAKXEEocGTJ37PMCs4TIYMjAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sa&amp;lvar'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable Accuracy="0.85" DesignTimeRectangle="936, 618, 110, 33" ElementType="Button" FriendlyName="'Sa&amp;lvar'" FullSelectorArgument="&lt;wnd ctrlid='1' title='Sa&amp;amp;lvar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='Sa&amp;amp;lvar' check:text='Sa&amp;amp;lvar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGQSURBVHhe7ZbtjYMwDIZvJ/4wS5bJIPzJKoySDdggR0jo2cRNqvugZ+t19UgNwW6VRzZ8zPOcgH4g0ggPkdu2AYWIIpdlAYroipymCSgAIo0AkUaASCNApBEg0ggQaQSINAJEGkGVSL8mHqsX75PIuTE4cc8CSkS6FGIrzoeQHFn3gEgh6XZcSHH/BCfsvQhECkn341OeqquX9iqHbBKRdysVeYzoS3e73PJnTrdWmQ6rL/9p/5b8Y+99KBFZD3qPZ13lwko6th3FrCPLQpBT1v1aZR0jvef9qBF5QDplOCYvspjIo8PJqD7qdjqL1aoiR79/M7pEnuSDzSGNRxpPRfL1kfdyLd69/wWdIjPsBag+r+i4ZF3Uivzav4oZ1YLIX4a8AAmjkb287DQiz/HqL7nDWhD5ffLhiqOvHjjrznPNu6oVWa/FPZNeH9aCyB9Qxx0LoWvOyIfOxqEssjxribRKvxZEgj8EIo0AkUaASCNApBEg0ggQaQSINAJEGmEoEujhqUigj0Yk0A1EmmBOn/YnST1zRrbdAAAAAElFTkSuQmCC" InformativeScreenshot="cccff8692b451c1c7f5e740ab20dc330.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[var_dtAcoes]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='DATA' ReferenceIdx='0' Name='DATA'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='ABERTURA' ReferenceIdx='1' Name='ABERTURA'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='FECHAMENTO' ReferenceIdx='2' Name='FECHAMENTO'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='VARIAÇÃO' ReferenceIdx='3' Name='VARIAÇÃO'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='MÍNIMO' ReferenceIdx='4' Name='MÍNIMO'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='MÁXIMO' ReferenceIdx='5' Name='MÁXIMO'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='VOLUME' ReferenceIdx='6' Name='VOLUME'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://www.infomoney.com.br/cotacoes/petrobras-petr4/historico/" DesignTimeRectangle="179, 806, 1027, 58" ElementType="Button" FriendlyName="'Carregar mais'" FullSelectorArgument="&lt;webctrl id='load_more_quotes_history' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='load_more_quotes_history' tag='BUTTON' type='' aaname='Carregar mais' check:text='Carregar mais' /&gt;" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nvg_everyb' title='Petrobras PETR4 - Histórico | InfoMoney' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="179, 496, 1026, 2095" FriendlyName="'TABLE quotes_history'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" InformativeScreenshot="40856fa9f110dbf1a1de5269b1be054c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='nvg_everyb' title='Petrobras PETR4 - Histórico | InfoMoney' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAATSURBVDhPYxgFo2AUjAIwYGAAAAQQAAGnRHxjAAAAAElFTkSuQmCC" InformativeScreenshot="c2ac5c994fc939cba6015b0b18a8dde4.png" Selector="&lt;html app='chrome.exe' htmlwindowname='nvg_everyb' title='Petrobras PETR4 - Histórico | InfoMoney'/&gt;" Url="https://www.infomoney.com.br/cotacoes/petrobras-petr4/historico/" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[var_dtAcoes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="var_strDataAcao" />
+                <Variable x:TypeArguments="x:String" Name="var_strAbertura" />
+                <Variable x:TypeArguments="x:String" Name="var_strValor" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strDataAcao]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(0).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strAbertura]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strValor]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Data da ação: &quot; + var_strDataAcao + Environment.NewLine +&#xD;&#xA;&quot;Abertura: &quot; + var_strAbertura + Environment.NewLine +&#xD;&#xA;&quot;Valor: &quot; + var_strValor]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[var_dtAcoesCsv]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[var_strNomeArquivo + &quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[var_dtAcoesCsv]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,476" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="var_strDataAcao" />
+                <Variable x:TypeArguments="x:String" Name="var_strAbertura" />
+                <Variable x:TypeArguments="x:String" Name="var_strValor" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strDataAcao]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(0).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strAbertura]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[var_strValor]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Data da ação: &quot; + var_strDataAcao + Environment.NewLine +&#xA;&quot;Abertura: &quot; + var_strAbertura + Environment.NewLine +&#xA;&quot;Valor: &quot; + var_strValor]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+    </Sequence>
   </Sequence>
 </Activity>
